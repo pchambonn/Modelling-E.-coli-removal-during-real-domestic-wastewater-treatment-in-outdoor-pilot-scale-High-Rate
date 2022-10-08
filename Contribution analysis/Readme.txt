@@ -7,6 +7,8 @@ Matlab data sets:
 	Data set of values for mechanism contribution to overall E. coli decay as predicted from the yearly environmental data. This data set includes 2000 data sets as generated from the 2000 sets of fitting parameters obtained from Monte Carlo analysis to evaluate uncertainties on predictions.
 * yearlyDecayValue.mat:
 	Data set of values for mechanism contribution to overall E. coli decay as predicted from the yearly environmental data. 
+/!\  the data sets were not included to the GitHub repository. These data sets should therefore be generated first from the available scripts before running the scripts needing this data
+
 
 Matla scripts:
 * Main_plot_seasonalZoomedDecay.m:
