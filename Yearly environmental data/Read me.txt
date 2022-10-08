@@ -1,0 +1,29 @@
+This folder contains the Excel data table and Matlab script relative to the publication PREDICTION OF E. COLI DECAY MECHANISMS DURING WASTEWATER TREATMENT IN HIGH RATE ALGAL PONDS.
+All files presented are linked to the analysis and transformation for further model based analysis of the environmental data (pH, temperature, and metorological data).
+
+The file included in this folder are:
+Excel files:
+* HRAP_A_pH_DO_T_yearly data.xlsx: 
+	Excel table of all the pH and temperature recorded on HRAP A
+* HRAP_B_pH_DO_T_yearly data.xlsx: 
+	Excel table of all the pH and temperature recorded on HRAP B
+* NIWA_meteo_data_Palmerston_North.xlsx: 
+	Excel table of the meteorological data recorded in Palmerston North by NIWA including sunlight intensity data
+* TSS_light attenuation.xlsx: 
+	Excel data file gathering the TSS concentration and inferred light attenaution coefficient data from yearly monitoring.
+* Optical_density_vs_TSS.xlsx: 
+	Excel data file compiling the data set of TSS vs broth light attenuation in HRAPs used to develop the linear regression between both variables. Figure S3.1 is drawn in this excel file.
+
+Matlab scripts:
+* time_interpolation.m: 
+	This function evaluates the value of a variable x for a certain data based on two values of this variable for dates framing the given one.
+
+* Main_yearly_environmental_data_format.m: 
+	This script gathers, formats, and draw graphs of the yearly environmental data from HRAP A and B to use for the publication Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds.
+* Main_yearly_environmental_data_figure.m:
+	This script aims at loading the pre-existing data variables constructed with Main_yearly_environmental_data_format.m and at drawing the figures to be included in the publication PREDICTION OF E. COLI DECAY MECHANISMS DURING WASTEWATER TREATMENT IN HIGH RATE ALGAL PONDS relative to this data set. This script is hence used to draw the figure Figure S9.1 and carry out the statistical analysis used in the discussion of S9.
+* Main_linreg_OD_vs_DW: 
+	This script aims at performing the linear regression between optical density and dryweight using data from pilot scale HRAP in order to determine the regression coefficient and accuracy on their determination for the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds'. This script contributes to the results discussed in S3
+
+Matlab data set:
+* yearly_environmental_data_formatted: data file of the yearly environmental data formatted with the script "Main_yearly_environmental_data_format.m".
