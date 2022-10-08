@@ -1,0 +1,43 @@
+This folder contains Excel data tables, Matlab formatted data tables, and Matlab scripts relative to daily profile anaylises in the publication "PREDICTION OF E. COLI DECAY MECHANISMS DURING WASTEWATER TREATMENT IN HIGH RATE ALGAL PONDS".
+The subfolder 'Functions' contains the Matlab function created that are used in the scripts contained in the present folder.
+
+The list and rapid description of the files contained is presented below.
+
+Excel data tables:
+* Daily_profile_rawdata_original.xlsx: 
+	Data table in which was compiled the original data collected during daily profile experiments.
+* Daily_profile_transformedData.xlsx: 
+	Data table in which was stored the formatted data from daily profile experiments for later use for analysis.
+
+Matlab data tables:
+* bench_data_fitting_MC_analysis.mat: 
+	Results from the Monte Carlo analysis giving uncertainty on the fitted paratemers data set of the publication Chambonniere et al. (2022) [ https://doi.org/10.1371/journal.pone.0265576 ]
+* fittingParameters_bestFit0.mat: 
+	list of values of fitting parameters minimizing the SSR of the log transformed E. coli cell count in the daily profile fitting data set (values shown in Table 2 of the manuscript).
+* inputData_fit_MonteCarlo: 
+	list of sets Monte Carlo simulation generated data set for fitted parameters. 2000 sets of values for the fitted parameters are contained in this data set, values being derived from fitting on parameter and variables values randomly generated within their uncertainty range.
+
+
+Matlab scripts:
+* Main_dailyProfile_xlsTransformation.m: 
+	This script aims at transfroming the excel file of raw data from daily profile experiment and to transform it into a another excel file that will be used for data analysis in relation with daily profiles in the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds'
+* Main_figure_daily_profile_measurements.m:
+	This script aims at drawing the figure describing measurements from daily profiles of sunlight intensity, pH, temperature, and E. coli cell counts. This figure corresponds to Figure S1.1 in the publication PREDICTION OF E. COLI DECAY MECHANISMS DURING WASTEWATER TREATMENT IN HIGH RATE ALGAL PONDS.
+* Main_dailyProfile_analysis.m:
+	This script aims at performing most analysis realeted withdaily profile experiments in the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds' This script is hence used to draw Figures 2, S5.1, S5.2, S7.1, S6.2.
+* Main_MonteCarlo_fitting.m:
+	This script aims at performing Monte Carlo analysis to determine a set of fitted parameters set in the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds'. Each set of fitted paramaeters hence determined represent plausible values due to input uncertainty where the fitting was performed.
+* Main_sensitivityAnalysis_fittedParameters.m:
+	This script aims at performing the fitting model sensitivity analysis and drawing the tornado diagram associated corresponding to Figure 1 of the manuscript "Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds".
+* Main_sensitivityAnalysis_model_fitness.m:
+	This script aims at performing the sensitivity analysis of model fitness and drawing the tornado diagram associated (Figure S8-1) for  the manuscript "Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds".
+
+Matlab function (folder 'Functions'):
+* create_database_MonteCarlo.m:
+	% This script aims at preparing the inputs for a single Monte Carlo simulation in the objective of fitting uncertainty analysis as performed in the files  Main_MonteCarlo_fitting in the context of the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds'.
+* create_database_SensitivityAnalysis.m:
+	% This script aims at preparing the inputs for a single sensitivity analysis simulation in the objective of fitting uncertainty analysis as performed in the files Main_sensitivityAnalysis_fittedParameters and Main_sensitivityAnalysis_model_fitness in the context of the publication 'Modelling E. coli removal during real domestic wastewater treatment in  outdoor pilot scale High Rate Algal Ponds'.
+* dailyProfile_fitting_function.m:
+	% This script is developped in relation with the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds' with the objective to fit the E. coli decay model developped in the publication to the data from daily profiles.
+* dailyProfile_fitting_function_SSR.m:
+	% This function enables to compute the SSR directly based on the function dailyProfile_fitting_function. This function enables to minimize the SSR of the predictive model developped in the publication 'Modelling E. coli removal during real domestic wastewater treatment in outdoor pilot scale High Rate Algal Ponds' in order to compute the best fit relatively to the fitting parameters.
