@@ -8,3 +8,6 @@ The subfolder contained in this repository are:
 * Contribution analysis: scripts and data sets associated with the analysis of mechanism contirbution to overall E. colid decay.
 * Daily profiles: scripts and data sets associated to the analysis of daily profile experiments
 * Yearly environmental data: scripts and data sets associated to the formatting and analysis of yearly environmental data from HRAP monitoring
+
+
+/!\  Some data sets needed for the generation of results were not included to the GitHub repository. These data sets can and should therefore be generated first from the available scripts before running the scripts needing this data. Consult the Read me.txt files in each sub folder of this repository for more information.
