@@ -15,7 +15,7 @@ fs = 15;
 
 % option_graphic: option to create outputs assessing the quality of the fit
     % (= 1)
-option_graphic = 1;
+option_graphic = 0;
 
 
 %% Import parameters
@@ -82,7 +82,7 @@ fitted_par = [3.5317e+04,...
 % Errors below are given in 95% CI (relative or absolute value)
 
 err_pH = 0.2; % pH unit
-err_temp = 0.2; % °C
+err_temp = 0.2; % Â°C
 err_sun = 0.1; % (relative, *100%)
 err_coli_IN = 0.15; % (relative, *100)
 err_coli = 0; % 1, -1, or value to compute it as basevalue+err_coli*(maxIC - minIC)/2
