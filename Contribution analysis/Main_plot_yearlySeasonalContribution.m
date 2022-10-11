@@ -15,7 +15,7 @@ N_MC = size(contribution_dark_A_MC{1,1},2);
 
 %% Figure S9.2
 
-fs = 18;
+fs = 20;
 
 figure(1), clf, hold on
 % sgtitle('HRAP B','FontSize',fs+2,'FontWeight','bold')
@@ -184,6 +184,7 @@ contribution_B_MC = [mean([contribution_all_B_winter_MC(:,1) , contribution_all_
     mean([contribution_all_B_winter_MC(:,3) , contribution_all_B_spring_MC(:,3) , contribution_all_B_summer_MC(:,3) , contribution_all_B_fall_MC(:,3)],2)];
 
 %% Figure 3
+fs = 16; 
 
 position_x_left = 0.10;
 position_x_right = 0.55;
@@ -279,6 +280,29 @@ figure(101)
 fig = gcf;
 fig.Position = [50 50 900 700];
 yll = ylabel('Mechanism relative contribution to total {\itE. coli} decay (%)','FontSize',fs + 1,'FontWeight','bold')
-yll.Position(1) = yll.Position(1) - abs(yll.Position(1)*0.5)
+yll.Position(1) = yll.Position(1) - abs(yll.Position(1)*0.25)
 yll.Position(2) = yll.Position(2) + abs(yll.Position(2)*1.25)
+
+%% Values for abstract
+% The determination of contribution values (95% CI) used in abstract of the
+% publication are determined below.
+
+total_contribution_dark_year_MC = mean([total_contribution_dark_A_year_MC,...
+    total_contribution_dark_B_year_MC],2);
+
+total_contribution_pH_year_MC = mean([total_contribution_pH_A_year_MC,...
+    total_contribution_pH_B_year_MC],2);
+
+total_contribution_sun_year_MC = mean([total_contribution_sun_A_year_MC,...
+    total_contribution_sun_B_year_MC],2);
+
+
+prctile(total_contribution_dark_year_MC,2.5)
+prctile(total_contribution_dark_year_MC,97.5)
+
+prctile(total_contribution_pH_year_MC,2.5)
+prctile(total_contribution_pH_year_MC,97.5)
+
+prctile(total_contribution_sun_year_MC,2.5)
+prctile(total_contribution_sun_year_MC,97.5)
 
