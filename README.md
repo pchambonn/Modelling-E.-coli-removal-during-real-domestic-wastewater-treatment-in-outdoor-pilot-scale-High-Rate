@@ -10,4 +10,4 @@ The subfolder contained in this repository are:
 * Yearly environmental data: scripts and data sets associated to the formatting and analysis of yearly environmental data from HRAP monitoring
 
 
-/!\  Some data sets needed for the generation of results were not included to the GitHub repository. These data sets can and should therefore be generated first from the available scripts before running the scripts needing this data. Consult the Read me.txt files in each sub folder of this repository for more information.
+/!\  Some data sets needed for the generation of results were not included to the GitHub repository due to exceding the size limit. These data sets can and should therefore be generated first from the available scripts before running the scripts needing this data. Consult the Read me.txt files in each sub folder of this repository for more information. The data sets used for this study are nevertheless available in the folowing repository: https://doi.org/10.6084/m9.figshare.c.6238524.
