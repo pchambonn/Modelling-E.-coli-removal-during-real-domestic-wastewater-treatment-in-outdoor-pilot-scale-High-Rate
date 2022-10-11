@@ -16,6 +16,9 @@ Matlab data sets:
 	list of values of fitting parameters minimizing the SSR of the log transformed E. coli cell count in the daily profile fitting data set (values shown in Table 2 of the manuscript).
 * inputData_fit_MonteCarlo: 
 	list of sets Monte Carlo simulation generated data set for fitted parameters. 2000 sets of values for the fitted parameters are contained in this data set, values being derived from fitting on parameter and variables values randomly generated within their uncertainty range.
+* fittingParametersMonteCarlo
+	list of values of fitting parameters minimizing the SSR of the log transformed E. coli cell count in the daily profile fitting data set generated during Monte Carlo analysis for uncertainty analysis. This data set consists in 2000 set of values of fitting parameters each representative of a realistic within uncertainty input data set.
+
 	
 /!\  the data sets were not included to the GitHub repository. These data sets should therefore be generated first from the available scripts before running the scripts needing this data
 
