@@ -67,7 +67,7 @@ formatSpec = '%.2f'; % option which limits to 2 digits the results presented in 
         DO_data = cell(nExp,1); 
         % Table of pH
         pH_data = cell(nExp,1);
-        % Table of temperature (°C)
+        % Table of temperature (Â°C)
         temp_data = cell(nExp,1);
         % Table of E. coli cell count measured (MPN/100mL)
         coli_data = cell(nExp,1);
@@ -630,7 +630,12 @@ fig.Position = [50 50 750 700];
 %% Part III: Validation of the fitted model on the remaining 4 daily profiles
 % The new set of fitted parameters is now tested to predict E. coli cell
 % count on the validation data set. The calculation is performed as during
-% prior analysis.
+% prior analysis. This section necessitates previous section to have been
+% ran to initiate the values of fitted paramereters from the best fit
+% values.
+
+fs = 14;
+formatSpec = '%.2f';
 
 dp_name = {'12_10' , '17_11' , '10_02' , '16_03' };
 TSSTable = [220 , 310 , 210 , 740 ];
@@ -832,7 +837,7 @@ fitted_par = [k_pH_bestFit0,...
 % Uncertainty definition
 if option_MC == 1
     err_pH = 0.2; % pH unit
-    err_temp = 0.2; % °C
+    err_temp = 0.2; % Â°C
     err_sun = 0.1; % (relative, *100%)
     err_coli_IN = 0.15; % (relative, *100)
     err_coli = 1; % 1, -1, or value to compute it as basevalue+err_coli*(maxIC - minIC)/2
